@@ -2,7 +2,7 @@
 
 For the purposes of this workshop, we've created a fun little Python Flask app that displays a random cat `.gif` every time it is loaded - because, you know, who doesn't like cats?
 
->**Note:** The code for this section is in this repository in the [flask-app](https://github.com/docker/labs/tree/master/beginner/flask-app) directory.
+>**Note:** This section is in this repository in the [docker-beginners-quide](https://github.com/docker/labs/blob/master/beginner/chapters/webapps) directory.
 
 Now that you have a better understanding of images, it's time to create your own. Our goal here is to create an image that sandboxes a small [Flask](http://flask.pocoo.org) application.
 
@@ -10,7 +10,7 @@ Now that you have a better understanding of images, it's time to create your own
 
 We'll do this by first pulling together the components for a random cat picture generator built with Python Flask, then _dockerizing_ it by writing a _Dockerfile_. Finally, we'll build the image, and then run it.
 
-### 2.3.3 Build the image
+### Build the image
 
 Now that you have your `Dockerfile`, you can build your image. The `docker build` command does the heavy-lifting of creating a docker image from a `Dockerfile`.
 
@@ -86,7 +86,7 @@ Successfully built 2f7357a0805d
 
 If you don't have the `alpine:3.5` image, the client will first pull the image and then create your image. Therefore, your output on running the command will look different from mine. If everything went well, your image should be ready! Run `docker images` and see if your image (`<YOUR_USERNAME>/myfirstapp`) shows.
 
-### 2.3.4 Run your image
+### Run your image
 The next step in this section is to run the image and see if it actually works.
 
 ```bash
